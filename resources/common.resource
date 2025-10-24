@@ -1,38 +1,35 @@
 *** Settings ***
 Library                         QWeb
 Library                         QForce
+Library                         QVision
 Library                         String
 Library                         Collections
+Library                         DateTime
 
-
-# *** Variables ***
-# ${browser}                      chrome
-# ${username}                     YOUR USERNAME HERE
-# ${login_url}                    https://YOURDOMAIN.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
-# ${home_url}                     ${login_url}/lightning/page/home
 
 *** Variables ***
 ${browser}                      chrome
-${username}                     ea9mlm8la81a5l-pmcd@force.com
-${login_url}                    https://energy-force-4969.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${username}                     YOUR USERNAME HERE
+${login_url}                    https://YOURDOMAIN.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
-${password}		      TrialSF01!
 
 
 *** Keywords ***
 Setup Browser
-    Set Library Search Order    QWeb                        QForce
+    Set Library Search Order    QForce                        QWeb                        QVision
     Open Browser                about:blank                 ${browser}
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
-    SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
+    SetConfig                   DefaultTimeout              30s                         #sometimes salesforce is slow
 
 
 Close All Browser Sessions
+    Set Library Search Order    QForce                        QWeb                        QVision
     Close All Browsers
 
 
 Login
     [Documentation]             Login to Salesforce instance
+    Set Library Search Order    QForce                        QWeb                        QVision
     GoTo                        ${login_url}
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
@@ -52,12 +49,14 @@ Login
     #     ClickText               Verify
     # END
 
+
 Login As
     [Documentation]       Login As different persona. User needs to be logged into Salesforce with Admin rights
     ...                   before calling this keyword to change persona.
     ...                   Example:
     ...                   LoginAs    Chatter Expert
     [Arguments]           ${persona}
+    Set Library Search Order    QForce                        QWeb                        QVision
     ClickText             Setup
     ClickText             Setup for current app
     SwitchWindow          NEW
@@ -68,13 +67,7 @@ Login As
 
 Home
     [Documentation]             Navigate to homepage, login if needed
+    Set Library Search Order    QForce                        QWeb                        QVision
     GoTo                        ${home_url}
     ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                  2
     Run Keyword If              ${login_status}             Login                   
-    ClickText                   Home
-    VerifyTitle                 Home | Salesforce
-
-Sales
-    [Documentation]             Navigate to homepage, login if needed
-    LaunchApp                   Sales
-    VerifyText                  Sales
