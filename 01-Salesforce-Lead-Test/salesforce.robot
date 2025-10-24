@@ -4,7 +4,7 @@ Suite Setup           Setup Browser
 Suite Teardown        Close All Browser Sessions
 
 *** Test Cases ***
-Exercise 6 - Entering A Lead Tina Smith
+Exercise 1 - Entering A Lead Tina Smith
     [tags]            Lead
     Appstate          Home
     Launch App        Sales
@@ -43,7 +43,7 @@ Exercise 6 - Entering A Lead Tina Smith
     VerifyText        Manager
     VerifyText        Growmore
 
-Exercise 6 - Delete Tina Smith's Lead
+Exercise 1 - Delete Tina Smith's Lead
     [tags]            Lead                        Git Repo Exercise
     LaunchApp         Sales
     ClickText         Leads
