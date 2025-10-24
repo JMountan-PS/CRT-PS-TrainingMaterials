@@ -1,8 +1,7 @@
 *** Settings ***
-Resource                      ../resources/common.robot
+Resource                      ../resources/common.resource
 Suite Setup                   Setup Browser
 Suite Teardown                Close All Browser Sessions
-
 
 *** Test Cases ***
 Exercise 6 - Entering A Lead Tina Smith
