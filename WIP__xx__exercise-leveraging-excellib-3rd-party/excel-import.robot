@@ -137,7 +137,7 @@ Example: Load and Use Excel Data
     Log To Console    Status: ${first_lead}[lead_status]
     
     # Example: Iterate through all leads
-    FOR    &{lead}    IN    @{all_leads}
+    FOR    ${lead}    IN    @{all_leads}
         Log To Console    Processing: ${lead}[first_name] ${lead}[last_name] - ${lead}[company]
     END
 
