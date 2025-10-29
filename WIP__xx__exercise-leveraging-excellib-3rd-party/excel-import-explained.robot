@@ -31,7 +31,7 @@ ${SHEET_NAME}        leadsDataScrubbed
 # Safety limit: Maximum number of rows to process before stopping.
 # This prevents infinite loops if the empty row detection fails.
 # Adjust this value based on your expected data size.
-${MAX_ROWS}          10000
+${MAX_ROWS}          1000
 
 # Row number where the column headers are located.
 # In most Excel files, row 1 contains the field names (headers).
