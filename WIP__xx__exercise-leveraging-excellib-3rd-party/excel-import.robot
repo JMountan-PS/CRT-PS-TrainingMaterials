@@ -71,7 +71,7 @@ Load Lead Test Data From Excel
 Load Lead Test Data From Excel With Max Rows
     [Documentation]    Loads lead test data with a specified maximum number of rows.
     ...                More efficient when you know the data size.
-    [Arguments]       ${max_rows}=100    ${sheet_name}=Sheet1
+    [Arguments]       ${max_rows}=100    ${sheet_name}=leadsDataScrubbed
     
     # Open the Excel file
     Open Excel Document    filename=${EXCEL_FILE}    doc_id=LeadData
