@@ -10,7 +10,7 @@ ${EXCEL_FILE}     ${CURDIR}/../testdata/leadsDataScrubbed.xlsx
 Load Lead Test Data From Excel
     [Documentation]    Loads lead test data from Excel file into a list of dictionaries.
     ...                Each dictionary represents one lead with all field values.
-    [Arguments]       ${sheet_name}=Sheet1
+    [Arguments]       ${sheet_name}=leadsDataScrubbed
     
     # Open the Excel file
     Open Excel Document    filename=${EXCEL_FILE}    doc_id=LeadData
