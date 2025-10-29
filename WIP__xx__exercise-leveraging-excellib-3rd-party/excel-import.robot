@@ -145,7 +145,7 @@ Example: Load and Use Excel Data
 Example: Load With Max Rows
     [Documentation]    Load only first 20 records for faster execution
     
-    @{leads}=    Load Lead Test Data From Excel With Max Rows    max_rows=20
+    @{leads}=    Load Lead Test Data From Excel With Max Rows    max_rows=10
     
     ${count}=    Get Length    ${leads}
     Log To Console    \nLoaded ${count} leads (max 20)
