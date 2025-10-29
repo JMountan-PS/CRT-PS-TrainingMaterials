@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../common.resource
+Resource              ../common.resource
 
 *** Keywords ***
 Enter a Lead
@@ -25,11 +25,11 @@ Enter a Lead
     TypeText          Company                     ${company}                  anchor=Last Name
 
     #Fill in optional information
-    Run Keyword If    "${phone}"!="${EMPTY}"      TypeText                    Phone                  ${phone}          anchor=First Name
-    Run Keyword If    "${title}"!="${EMPTY}"      TypeText                    Title                  ${title}          anchor=Address Information
-    Run Keyword If    "${email}"!="${EMPTY}"      TypeText                    Email                  ${email}          anchor=Rating
+    Run Keyword If    "${phone}"!="${EMPTY}"      TypeText                    Phone                  ${phone}              anchor=First Name
+    Run Keyword If    "${title}"!="${EMPTY}"      TypeText                    Title                  ${title}              anchor=Address Information
+    Run Keyword If    "${email}"!="${EMPTY}"      TypeText                    Email                  ${email}              anchor=Rating
     Run Keyword If    "${website}"!="${EMPTY}"    TypeText                    Website                ${website}
-    Run Keyword If    "${lead_source}"!="${EMPTY}"                            PickList               Lead Source       ${lead_source}
+    Run Keyword If    "${lead_source}"!="${EMPTY}"                            PickList               Lead Source           ${lead_source}
 
     #Save
     ClickText         Save                        partial_match=False
@@ -39,15 +39,15 @@ Enter a Lead
     #Verify Details
     ClickText         Details                     anchor=Activity
     VerifyText        ${salutation} ${first_name} ${last_name}                anchor=Details
-    VerifyText        ${title}                    anchor=Details
-    VerifyText        ${phone}                    anchor=Lead Status
+    Run Keyword If    "${title}"!="${EMPTY}"      VerifyText                  ${title}               anchor=Details
+    Run Keyword If    "${phone}"!="${EMPTY}"      VerifyText                  ${phone}               anchor=Lead Status
     VerifyField       Company                     ${company}
-    VerifyField       Website                     ${website}
+    Run Keyword If    "${website}"!="${EMPTY}"    VerifyField                 Website                ${website}
     Log Screenshot
 
     ClickText         Leads
     VerifyText        ${first_name} ${last_name}
-    VerifyText        ${title}
+    Run Keyword If    "${title}"!="${EMPTY}"      VerifyText                  ${title}
     VerifyText        ${company}
 
 Delete a Lead
