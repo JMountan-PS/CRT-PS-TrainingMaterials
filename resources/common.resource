@@ -12,7 +12,7 @@ Setup Browser
     Open Browser                about:blank                 ${browser}
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              30s                         #sometimes salesforce is slow
-    SetConfig                   XHRTimeout                  2s                          #Max time allotted for page loads, needed with CRT's OCT 2025 wait behavior update
+    SetConfig                   XHRTimeout                  3s                          #Max time allotted for page loads, needed with CRT's OCT 2025 wait behavior update
 
 Close All Browser Sessions
     Set Library Search Order    QForce                        QWeb                        QVision
