@@ -3,7 +3,7 @@ Resource             ../resources/common.resource
 Resource             ../resources/Sales/leads.resource
 Library              FakerLibrary
 Suite Setup          Setup Browser
-Test Setup           Run Keywords                Home            Unique Test Data
+Test Setup           Run Keywords                Home
 Suite Teardown       Close All Browser Sessions
 Test Template        Create Verify and Delete Lead End to End
 
