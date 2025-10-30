@@ -343,7 +343,7 @@ Example 5: Filtering Data
     @{working_leads}=    Create List
     
     # Filter leads with 'Working' status
-    FOR    &{lead}    IN    @{all_leads}
+    FOR    ${lead}    IN    @{all_leads}
         # Check if the lead_status field equals 'Working'
         ${is_working}=    Evaluate    '${lead}[lead_status]' == 'Working'
         
