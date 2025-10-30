@@ -310,7 +310,7 @@ Example 3: Iterating Through All Leads
     
     # Loop through each lead dictionary
     # The '&{lead}' syntax unpacks each dictionary from the list
-    FOR    &{lead}    IN    @{all_leads}
+    FOR    ${lead}    IN    @{all_leads}
         # Access fields directly using ${lead}[field_name]
         Log To Console    Processing: ${lead}[first_name] ${lead}[last_name]
         Log To Console    Company: ${lead}[company]
@@ -326,7 +326,7 @@ Example 4: Data-Driven Testing
     @{all_leads}=    Load Lead Test Data From Excel
     
     # Execute a test for each lead
-    FOR    &{lead}    IN    @{all_leads}
+    FOR    ${lead}    IN    @{all_leads}
         # Call a keyword that performs the actual test
         # Pass the entire dictionary using &{lead} syntax
         Process Single Lead    &{lead}
