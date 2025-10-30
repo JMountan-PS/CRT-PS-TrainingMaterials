@@ -22,11 +22,11 @@ Library           Collections
 # Example: If this file is at /home/user/tests/suite.robot
 #          then ${CURDIR} = /home/user/tests
 #          and ${CURDIR}/../testdata = /home/user/testdata
-${EXCEL_FILE}        ${CURDIR}/../testdata/leadsDataScrubbed.xlsx
+${EXCEL_FILE}        ${CURDIR}/../testdata/BulkLeadData.xlsx
 
 # The name of the worksheet/sheet within the Excel file to read from.
 # Excel files can contain multiple sheets - this specifies which one to use.
-${SHEET_NAME}        leadsDataScrubbed
+${SHEET_NAME}        BulkLeadData
 
 # Safety limit: Maximum number of rows to process before stopping.
 # This prevents infinite loops if the empty row detection fails.
