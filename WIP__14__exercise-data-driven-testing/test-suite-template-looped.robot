@@ -9,7 +9,7 @@ Suite Teardown       Close All Browser Sessions
 *** Test Cases ***       
 Looped Test Case Template
     [Template]    Create Verify and Delete Lead End to End    
-    FOR  ${Lead}    IN     @{LEADS_DATA}
+    FOR  ${Lead}    IN     @{ALL_LEADS}
         ${Lead}[lead_status]    ${Lead}[last_name]    ${Lead}[company]    
         ...                     ${Lead}[first_name]    ${Lead}[salutation]    
         ...                     ${Lead}[phone]         ${Lead}[title]
