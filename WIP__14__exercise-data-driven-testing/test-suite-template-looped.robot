@@ -9,14 +9,13 @@ Suite Teardown       Close All Browser Sessions
 *** Test Cases ***       
 Looped Test Case Template
     [Template]    Create Verify and Delete Lead End to End    
-
-Suite Template Testing - Tina Smith                                                           Working             Smith                          Growmore                   Tina           Ms.            555-0123           Sales Director           tina.smith@growmore.com        www.growmore.com           Website
-Suite Template Testing - Joe Shmoe                                                            New                 Shmoe                          Tech Innovations           Joe            Mr.            555-0456           Product Manager          joe.shmoe@techinnovations.com  www.techinnovations.com    External Referral
-Suite Template Testing - Sarah Johnson                                                        Nurturing           Johnson                        Global Solutions Inc       Sarah          Ms.            555-0789           VP of Operations         sarah.j@globalsolutions.com    www.globalsolutions.com    Trade Show
-Suite Template Testing - Michael Chen                                                         Working             Chen                           DataCore Systems           Michael        Dr.            555-0234           Chief Technology Officer michael.chen@datacore.io       www.datacore.io            Partner
-Suite Template Testing - Emily Rodriguez                                                      Unqualified         Rodriguez                      Apex Consulting            Emily          Mrs.           555-0891           Business Analyst         emily.r@apexconsult.com        www.apexconsult.com        Webinar
-
-
+    FOR  ${Lead}    IN     @{LEADS_DATA}
+        ${Lead}[lead_status]    ${Lead}[last_name]    ${Lead}[company]    
+        ...                     ${Lead}[first_name]    ${Lead}[salutation]    
+        ...                     ${Lead}[phone]         ${Lead}[title]
+        ...                     ${Lead}[email]         ${Lead}[website]
+        ...                     ${Lead}[lead_source]    
+    END
 
 *** Keywords ***
 
