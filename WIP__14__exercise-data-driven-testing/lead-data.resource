@@ -67,7 +67,7 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    phone=555-0101
 ...    mobile_phone=555-0201
 ...    website=www.acme.com
-...    lead_status=Open - Not Contacted
+...    lead_status=New
 ...    lead_source=Website
 ...    rating=Warm
 ...    industry=Technology
@@ -83,7 +83,7 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    phone=555-0102
 ...    mobile_phone=555-0202
 ...    website=www.techstart.com
-...    lead_status=Working - Contacted
+...    lead_status=Working
 ...    lead_source=Trade Show
 ...    rating=Hot
 ...    industry=Technology
@@ -102,8 +102,8 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    mobile_phone=555-0203
 ...    fax=555-0303
 ...    website=www.globaldynamics.com
-...    lead_status=Working - Contacted
-...    lead_source=Partner Referral
+...    lead_status=Working
+...    lead_source=Partner
 ...    rating=Hot
 ...    industry=Manufacturing
 ...    number_of_employees=500
@@ -120,7 +120,7 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    phone=555-0104
 ...    mobile_phone=555-0204
 ...    website=www.innovatelabs.com
-...    lead_status=Open - Not Contacted
+...    lead_status=New
 ...    lead_source=Webinar
 ...    rating=Warm
 ...    industry=Biotechnology
@@ -148,7 +148,7 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    state=NY
 ...    postal_code=10001
 ...    country=USA
-...    lead_status=Working - Contacted
+...    lead_status=Working
 ...    lead_source=Trade Show
 ...    rating=Hot
 ...    industry=Technology
@@ -176,8 +176,8 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    state=MA
 ...    postal_code=02115
 ...    country=USA
-...    lead_status=Working - Contacted
-...    lead_source=Partner Referral
+...    lead_status=Working
+...    lead_source=Partner
 ...    rating=Hot
 ...    industry=Healthcare
 ...    number_of_employees=1200
@@ -208,7 +208,7 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    state=Île-de-France
 ...    postal_code=75008
 ...    country=France
-...    lead_status=Open - Not Contacted
+...    lead_status=New
 ...    lead_source=Website
 ...    rating=Warm
 ...    industry=Consulting
@@ -231,7 +231,7 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    state=MA
 ...    postal_code=02138
 ...    country=USA
-...    lead_status=Open - Not Contacted
+...    lead_status=New
 ...    lead_source=Advertisement
 ...    rating=Cold
 ...    industry=Education
@@ -240,3 +240,10 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    do_not_call=True
 ...    email_opt_out=False
 ...    fax_opt_out=True
+
+You
+31 Oct, 17:35
+Convert this csv snippet into a list of dictionaries for use with CRT. Build this in the variables section if possiblelead_status,last_name,company,first_name,salutation,phone,title,email,website,lead_source
+Open,Johnson,Acme Corporation,Sarah,Ms.,555-0101,VP of Sales,sarah.johnson@acme.com,www.acme.com,Website
+Working,Chen,TechStart Inc,Michael,Mr.,555-0102,Chief Technology Officer,michael.chen@techstart.com,www.techstart.com,External Referral
+Qualified,Rodriguez,Global Dynamics,Emily,Ms.,555-0103,Operations 
