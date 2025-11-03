@@ -1,7 +1,7 @@
 *** Settings ***
 Resource                    ../resources/common.resource
 Resource                    ../resources/Sales/leads.resource
-Resource                    LeadData.resource
+Resource                    lead-data.resource
 Suite Setup                 Setup Browser
 Test Setup                  Run Keywords                Home
 Suite Teardown              Close All Browser Sessions
