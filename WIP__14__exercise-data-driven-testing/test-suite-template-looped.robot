@@ -21,5 +21,6 @@ Looped Test Case Template
 
 Create Verify and Delete Lead End to End
     [Arguments]      ${lead_status}              ${last_name}    ${company}          ${first_name}    ${salutation}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
+    Log To Console                        Step: Entering Lead - ${first_name} ${lastname} - ${lead_status}
     Enter a Lead     ${lead_status}              ${last_name}    ${company}       ${first_name}    ${salutation}       ${phone}             ${title}             ${email}             ${website}             ${lead_source}
     Delete a Lead    ${first_name}               ${last_name}
