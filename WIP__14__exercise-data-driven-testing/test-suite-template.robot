@@ -1,7 +1,6 @@
 *** Settings ***
 Resource             ../resources/common.resource
 Resource             ../resources/Sales/leads.resource
-Library              FakerLibrary
 Suite Setup          Setup Browser
 Test Setup           Run Keywords                Home
 Suite Teardown       Close All Browser Sessions
