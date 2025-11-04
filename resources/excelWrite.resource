@@ -15,7 +15,7 @@ Library                         ExcelLibrary
 
 # ${CURDIR} is a built-in Robot Framework variable that contains the absolute
 # path to the directory where the current test suite file is located.
-${EXCEL_OUTPUT_DIR}             ${CURDIR}/../testdata/output
+${EXCEL_OUTPUT_DIR}             ${CURDIR}/../../output
 
 # Default sheet name for new Excel documents
 ${DEFAULT_SHEET_NAME}           Sheet1
