@@ -11,4 +11,4 @@ Open, read, write, save, and commit text file
     ${currDateTime}    Get Current Date
     Append To File    ${text_path}    Appended value at: ${currDateTime}
 
-    Commit And Push     GitOp.txt    version_3_dev
+    commit_and_push     GitOp.txt    version_3_dev
