@@ -22,7 +22,7 @@ Library           Collections
 # Example: If this file is at /home/user/tests/suite.robot
 #          then ${CURDIR} = /home/user/tests
 #          and ${CURDIR}/../testdata = /home/user/testdata
-${EXCEL_FILE}        ${CURDIR}/../testdata/BulkLeadData.xlsx
+${EXCEL_FILE}        ${EXECDIR}/../testdata/BulkLeadData.xlsx
 
 # The name of the worksheet/sheet within the Excel file to read from.
 # Excel files can contain multiple sheets - this specifies which one to use.
