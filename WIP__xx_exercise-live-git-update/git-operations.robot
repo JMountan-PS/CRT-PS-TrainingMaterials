@@ -17,6 +17,7 @@ Open, read, write, save, and commit text file
     Append To File    ${text_path}    Appended value at: ${currDateTime}
 
     commit_and_push     GitOp.txt    version_3_dev
+    
 
 Write New Excel to output folder
     List Directory    ${CURDIR}/../../output
