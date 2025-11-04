@@ -5,6 +5,7 @@ Library    DateTime
 
 *** Variables ***
 ${text_path}    ${CURDIR}/../testdata/GitOp.txt
+${output_path}    ${CURDIR}/../../output
 
 *** Test Cases ***
 Open, read, write, save, and commit text file
@@ -14,4 +15,4 @@ Open, read, write, save, and commit text file
     commit_and_push     GitOp.txt    version_3_dev
 
 Write to output folder
-    List Directory    ${CURDIR}/../..
+    List Directory    ${CURDIR}/../../output
