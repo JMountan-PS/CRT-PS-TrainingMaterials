@@ -1,5 +1,6 @@
 *** Settings ***
 Library    ../libraries/GitOperations.py
+Resource   ../resources/excelWrite.resource
 Library    OperatingSystem
 Library    DateTime
 
@@ -16,3 +17,5 @@ Open, read, write, save, and commit text file
 
 Write to output folder
     List Directory    ${CURDIR}/../../output
+    
+
