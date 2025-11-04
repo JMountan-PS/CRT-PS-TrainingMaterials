@@ -64,7 +64,6 @@ Create New Excel Document-copado
     
     [Return]                    ${document_id}
 
-
 Open Existing Excel Document-copado
     ###########################################################################
     # KEYWORD DOCUMENTATION
