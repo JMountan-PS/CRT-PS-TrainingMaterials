@@ -34,3 +34,4 @@ Write Excel to output folder
     Save Excel Document-copado        ${output_path}/excelToDownload.xlsx
 
     Close All Excel Documents-copado
+    
