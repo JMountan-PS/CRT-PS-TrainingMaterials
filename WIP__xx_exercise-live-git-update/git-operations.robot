@@ -59,3 +59,5 @@ Update Values in Existing Excel
 
     Save Excel Document-copado          ${output_path}/BulkLeadData.xlsx
 
+    Log To Console                      Something
+    Log                 something else       level=WARN
