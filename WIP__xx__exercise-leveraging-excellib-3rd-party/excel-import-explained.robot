@@ -277,6 +277,7 @@ Example 1: Basic Data Loading
     [Documentation]    Demonstrates the simplest way to load and verify Excel data
     
     List Directory     ${EXECDIR}
+    Log To Console     ${CURDIR}
 
     # Load all leads from the Excel file
     @{all_leads}=    Load Lead Test Data From Excel
