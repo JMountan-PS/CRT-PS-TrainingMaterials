@@ -6,6 +6,7 @@
 ###############################################################################
 Resource                        common.resource
 Library                         ExcelLibrary
+Library                    OperatingSystem
 
 
 *** Variables ***
