@@ -23,7 +23,7 @@ Library            OperatingSystem
 # Example: If the executing file is at /home/user/tests/suite.robot
 #          then ${EXECDIR} = /home/user/tests
 #          and ${EXECDIR}/../testdata = /home/user/testdata
-${EXCEL_FILE}        ${EXECDIR}/../testdata/BulkLeadData.xlsx
+${EXCEL_FILE}        ${CURDIR}/../testdata/BulkLeadData.xlsx
 
 # The name of the worksheet/sheet within the Excel file to read from.
 # Excel files can contain multiple sheets - this specifies which one to use.
