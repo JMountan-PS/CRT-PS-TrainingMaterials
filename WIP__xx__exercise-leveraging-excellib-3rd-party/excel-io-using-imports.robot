@@ -25,8 +25,8 @@ Open Existing excel and write to it via single cell
     Log To Console    Status: ${first_lead}[lead_status]
 
     #Use write single cell to update first row from Sarah Johnson -> Jim Smith
-    Write Single Cell-copado               1                4    Jim
-    Write Single Cell-copado               1                2    Smith
+    Write Single Cell-copado               2                4    Jim
+    Write Single Cell-copado               2                2    Smith
     
     Save Excel Document-copado             ${excel-path}
 
