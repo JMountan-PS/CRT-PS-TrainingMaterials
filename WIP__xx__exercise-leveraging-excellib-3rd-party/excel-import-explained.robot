@@ -9,6 +9,7 @@ Library           ExcelLibrary
 # Collections: Provides keywords for working with lists and dictionaries
 # Built-in Robot Framework library for data structure manipulation
 Library           Collections
+Library            OperatingSystem
 
 
 *** Variables ***
@@ -275,6 +276,8 @@ Load Lead Test Data From Excel
 Example 1: Basic Data Loading
     [Documentation]    Demonstrates the simplest way to load and verify Excel data
     
+    List Directory     ${EXECDIR}
+
     # Load all leads from the Excel file
     @{all_leads}=    Load Lead Test Data From Excel
     
