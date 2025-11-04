@@ -16,12 +16,12 @@ Library           Collections
 # CONFIGURATION VARIABLES
 ###############################################################################
 
-# ${CURDIR} is a built-in Robot Framework variable that contains the absolute
-# path to the directory where the current test suite file is located.
+# ${EXECDIR} is a built-in Robot Framework variable that contains the absolute
+# path to the directory where the executing test suite file is located.
 # 
-# Example: If this file is at /home/user/tests/suite.robot
-#          then ${CURDIR} = /home/user/tests
-#          and ${CURDIR}/../testdata = /home/user/testdata
+# Example: If the executing file is at /home/user/tests/suite.robot
+#          then ${EXECDIR} = /home/user/tests
+#          and ${EXECDIR}/../testdata = /home/user/testdata
 ${EXCEL_FILE}        ${EXECDIR}/../testdata/BulkLeadData.xlsx
 
 # The name of the worksheet/sheet within the Excel file to read from.
@@ -101,7 +101,7 @@ Load Lead Test Data From Excel
     # Log the file path for debugging purposes
     # This appears in the Robot Framework log file
     Log    Opened Excel file: ${EXCEL_FILE}
-    
+
     ###########################################################################
     # STEP 2: READ THE HEADER ROW
     ###########################################################################
