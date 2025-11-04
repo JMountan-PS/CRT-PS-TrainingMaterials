@@ -9,20 +9,18 @@ Library           ExcelLibrary
 # Collections: Provides keywords for working with lists and dictionaries
 # Built-in Robot Framework library for data structure manipulation
 Library           Collections
-Library            OperatingSystem
-
 
 *** Variables ***
 ###############################################################################
 # CONFIGURATION VARIABLES
 ###############################################################################
 
-# ${EXECDIR} is a built-in Robot Framework variable that contains the absolute
-# path to the directory where the executing test suite file is located.
+# ${CURDIR} is a built-in Robot Framework variable that contains the absolute
+# path to the directory where the current test suite file is located.
 # 
-# Example: If the executing file is at /home/user/tests/suite.robot
-#          then ${EXECDIR} = /home/user/tests
-#          and ${EXECDIR}/../testdata = /home/user/testdata
+# Example: If the current file is at /home/user/tests/suite.robot
+#          then ${CURDIR} = /home/user/tests
+#          and ${CURDIR}/../testdata = /home/user/testdata
 ${EXCEL_FILE}        ${CURDIR}/../testdata/BulkLeadData.xlsx
 
 # The name of the worksheet/sheet within the Excel file to read from.
@@ -275,10 +273,6 @@ Load Lead Test Data From Excel
 
 Example 1: Basic Data Loading
     [Documentation]    Demonstrates the simplest way to load and verify Excel data
-    
-    ${contents}   List Directory     ${EXECDIR}    
-    Log           ${contents}        level=WARN
-    Log     ${CURDIR}    level=WARN
 
     # Load all leads from the Excel file
     @{all_leads}=    Load Lead Test Data From Excel
