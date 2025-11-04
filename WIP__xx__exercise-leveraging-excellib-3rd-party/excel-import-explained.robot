@@ -276,8 +276,9 @@ Load Lead Test Data From Excel
 Example 1: Basic Data Loading
     [Documentation]    Demonstrates the simplest way to load and verify Excel data
     
-    List Directory     ${EXECDIR}
-    Log To Console     ${CURDIR}
+    ${contents}   List Directory     ${EXECDIR}    
+    Log           ${contents}        level=WARN
+    Log     ${CURDIR}    level=WARN
 
     # Load all leads from the Excel file
     @{all_leads}=    Load Lead Test Data From Excel
