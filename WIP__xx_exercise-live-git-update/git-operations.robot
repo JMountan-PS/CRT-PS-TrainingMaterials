@@ -16,7 +16,7 @@ Open, read, write, save, and commit text file
 
     commit_and_push     GitOp.txt    version_3_dev
 
-Write Excel to output folder
+Write New Excel to output folder
     List Directory    ${CURDIR}/../../output
     
     Create New Excel Document-copado    accountsData
@@ -34,4 +34,4 @@ Write Excel to output folder
     Save Excel Document-copado        ${output_path}/excelToDownload.xlsx
 
     Close All Excel Documents-copado
-    
+
