@@ -240,10 +240,3 @@ Documentation    Comprehensive Lead test data for Salesforce lead creation tests
 ...    do_not_call=True
 ...    email_opt_out=False
 ...    fax_opt_out=True
-
-You
-31 Oct, 17:35
-Convert this csv snippet into a list of dictionaries for use with CRT. Build this in the variables section if possiblelead_status,last_name,company,first_name,salutation,phone,title,email,website,lead_source
-Open,Johnson,Acme Corporation,Sarah,Ms.,555-0101,VP of Sales,sarah.johnson@acme.com,www.acme.com,Website
-Working,Chen,TechStart Inc,Michael,Mr.,555-0102,Chief Technology Officer,michael.chen@techstart.com,www.techstart.com,External Referral
-Qualified,Rodriguez,Global Dynamics,Emily,Ms.,555-0103,Operations 
