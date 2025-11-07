@@ -6,7 +6,7 @@ Library          DataDriver
 ...              sheet_name=BulkLeadData
 ...              encoding=utf-8
 Suite Setup                 Setup Browser
-Test Setup                  Run Keywords                Home
+Test Setup                  Home
 Suite Teardown              Close All Browser Sessions
 Test Template               Create Verify and Delete Lead End to End
 
@@ -25,4 +25,4 @@ Create Verify and Delete Lead End to End
         Delete a Lead       ${first_name}               ${last_name}
     EXCEPT                  AS                          ${error}
         Log To Console      ${error}
-    END
+    END 
