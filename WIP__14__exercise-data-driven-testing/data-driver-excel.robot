@@ -2,7 +2,7 @@
 Resource                    ../resources/common.resource
 Resource                    ../resources/Sales/leads.resource
 Library          DataDriver
-...              file=../testdata/BulkLeadData.xlsx
+...              file=${CURDIR}../testdata/BulkLeadData.xlsx
 ...              sheet_name=BulkLeadData
 ...              encoding=utf-8
 Suite Setup                 Setup Browser
