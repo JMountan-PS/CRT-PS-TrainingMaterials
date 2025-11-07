@@ -11,7 +11,7 @@ Suite Teardown              Close All Browser Sessions
 Test Template               Create Verify and Delete Lead End to End
 
 *** Test Cases ***       
-DataDriver - Creating a lead ${first_name} ${last_name} with ${company}
+DataDriver - Creating a lead 
     
 
 *** Keywords ***
