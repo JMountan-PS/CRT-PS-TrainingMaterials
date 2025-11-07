@@ -1,1 +1,2 @@
 pip install robotframework-excellib
+pip install -U robotframework-datadriver[XLS]
