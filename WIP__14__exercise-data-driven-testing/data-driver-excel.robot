@@ -19,9 +19,9 @@ DataDriver - Creating a lead ${first_name} ${last_name} with ${company}
 Create Verify and Delete Lead End to End
     [Arguments]             ${lead_status}              ${last_name}           ${company}      ${first_name}    ${salutation}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
     TRY
-        Log To Console      Step: Entering Lead - ${first_name} ${lastname} - ${lead_status}
+        Log To Console      Step: Entering Lead - ${first_name} ${last_name} - ${lead_status}
         Enter a Lead        ${lead_status}              ${last_name}           ${company}      ${first_name}    ${salutation}    ${phone}             ${title}             ${email}             ${website}             ${lead_source}
-        Log To Console      Step: Deleting Lead - ${first_name} ${lastname} - ${lead_status}
+        Log To Console      Step: Deleting Lead - ${first_name} ${last_name} - ${lead_status}
         Delete a Lead       ${first_name}               ${last_name}
     EXCEPT                  AS                          ${error}
         Log To Console      ${error}
