@@ -1,3 +1,4 @@
 robotframework-excellib
+robotframework-datadriver[XLS]
 pyyaml
 GitOperations.py
