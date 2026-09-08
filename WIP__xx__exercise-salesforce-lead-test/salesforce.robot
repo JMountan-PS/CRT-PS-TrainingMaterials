@@ -2,7 +2,7 @@
 Library    QWeb
 Resource              ../resources/common.resource
 Suite Setup           Setup Browser
-Suite Teardown        Close All Browser Sessions
+Suite Teardown        Close All Browsers
 
 *** Test Cases ***
 Exercise 1 - Entering A Lead Tina Smith
