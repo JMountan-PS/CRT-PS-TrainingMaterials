@@ -13,6 +13,7 @@ Setup Browser
     Open Browser                about:blank                 Chrome
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              30s                         #sometimes salesforce is slow
+    Login
 
 
 Login
