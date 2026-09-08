@@ -8,7 +8,8 @@ Suite Teardown        Close All Browsers
 Exercise 1 - Entering A Lead Tina Smith
     [tags]            Lead
 
-    Launch App        Sales
+    Home
+    Launch App        Leads
 
     ClickText         Leads
     ClickText         New                         anchor=Import
